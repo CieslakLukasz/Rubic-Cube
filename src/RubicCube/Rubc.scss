@@ -1,0 +1,276 @@
+.rubic-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1500px;
+}
+.controlPanel {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    button {
+        width: 150px;
+        height: fit-content;
+        padding: 1vw;
+        color: var(--fonts-color);
+        background-color: rgb(213,218,222);
+    }
+}
+.up-down-nav {
+    width: 10vw;
+    height: 10vw;
+    font-size: 1.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img {
+        width: 20%;
+    }
+    .moveleft {
+        transform: rotate(-90deg);
+    }
+    .moveright {
+        transform: rotate(90deg);
+    }
+    .movedown {
+        transform: rotate(180deg);
+    }
+    div {
+        width: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    div.left-right-nav {
+        display:flex;
+        flex-direction: row;
+    }
+}
+.rubic-cube {
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    .XZ {
+        position: absolute;
+        top:0;
+        left: 100px;
+
+    }
+    .XY { position: absolute;
+    top: 100px;
+    left: 100px;
+
+}
+.YZ {
+    position: absolute;
+    left:100px;
+    top:100px;
+
+}
+    .full {
+        width: 200px;
+        height: 200px;
+    }
+    .partX {
+        width: 200px;
+        height: 66.66px;
+    }
+    div.face {
+        position: absolute;
+        top: 0 ;
+        left: 0;
+        background-size: cover;
+        background-color:black;
+
+
+    div {
+        width: 62px;
+        height: 62px;
+        border-radius: 7px;
+        border: 2px solid black;
+        position: relative;
+
+    }
+    }
+    .control{
+        position: absolute;
+        left:100px;
+        top:100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap:wrap;
+        background-color: transparent;
+        .full {
+            width: 204px;
+            height: 204px;
+        }
+        .partX {
+            width: 204px;
+            height: 68px;
+        }
+        div.face {
+            position: absolute;
+            top: 0px ;
+            left: 0px;
+            background-size: cover;
+            background-color:transparent;
+
+        div {
+
+            width: 64px;
+            height: 64px;
+            border-radius: 7px;
+            border: 2px solid transparent;
+            position: relative;
+            color:rgb(18, 19, 17);
+            opacity: 0.8;
+            img {
+                width: 30%;
+            }
+            .movedown {
+                position: absolute;
+                top:0px ;
+                left: 35%;
+             }
+            .moveright{
+                transform: rotate(90deg);
+                position: absolute;
+                top: 35%;
+                right:0;
+
+            }
+            .moveleft{
+                transform: rotate(-90deg);
+                position: absolute;
+                top: 35%;
+                left:0px;
+
+            }
+            .moveup{
+                transform: rotate(180deg);
+                position: absolute;
+                bottom:0;
+                left: 35%;
+
+            }
+        }
+        }
+    }
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap:wrap;
+        background-color: transparent;
+    }
+}
+
+
+
+
+@media(max-width: 800px){
+
+    .rubic-container{
+    height: 100%;
+}
+
+.rubic-cube {
+    width: 100px;
+    height: 100px;
+    left: calc(50% - 50px);
+    top: 50%;
+    .XZ {
+        position: absolute;
+        top:0;
+        left:50px;
+    }
+    .XY { position: absolute;
+    top: 50px;
+    left:50px;
+}
+.YZ {
+    position: absolute;
+    left:50px;
+    top:50px;
+}
+.full {
+    width: 100px;
+    height: 100px;
+}
+.partX {
+    width: 100px;
+    height: 33.33px;
+}
+    div.face {
+        div {
+            width: 31px;
+            height: 31px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+    }
+.control{
+    top: 50px;
+    left: 50px;
+    .full {
+        width: 102px;
+        height: 102px;
+    }
+    .partX {
+        width: 102px;
+        height: 34px;
+    }
+    div.face {
+        .movedown {
+            left: calc(50% - 3px);
+         }
+        .moveright{
+            top:calc(50% - 4px);
+        }
+        .moveleft{
+
+            top:calc(50% - 4px);
+        }
+        .moveup{
+
+            left:calc(50% - 3px);
+        }
+        div {
+            width: 30px;
+        height: 30px;
+        }
+    }
+}
+
+}
+.controlPanel {
+    height: fit-content;
+    margin-top: 20px;
+    button {
+        width: 20%;
+        display: inline-block;
+    }
+}
+.up-down-nav {
+
+    width: 25%;
+    height: 10vw;
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+}
